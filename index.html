@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Data Checker</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Function to fetch HTML content using AJAX
+        function fetchHTML() {
+          $.ajax({
+            url: 'https://kioskcodb.com/Kiosk-4/printed.html',
+            method: 'GET',
+            success: function (data) {
+              // Compare the fetched data with previous data
+              // If new data is detected, call a function to save screenshot
+              // This comparison logic needs to be implemented
+            },
+          });
+        }
+
+        // Call fetchHTML function every 5 seconds (adjust as needed)
+        setInterval(fetchHTML, 5000);
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Dynamic Data Checker</h1>
+  </body>
+</html>
